@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercise 6k</title>
+</head>
+<body>
+  <h1>Cart Quantity - Max Check</h1>
+  <button onclick="addToCart()">Add to Cart</button>
+  <script>
+    let quantity = 8; // Starting quantity
+    const maxQuantity = 10;
+
+    function addToCart() {
+      if (quantity + 1 > maxQuantity) {
+        alert("The cart is full");
+      } else {
+        quantity++;
+        console.log("Updated Quantity:", quantity);
+      }
+    }
+  </script>
+</body>
+</html>

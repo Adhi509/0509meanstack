@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercise 8d</title>
+</head>
+<body>
+  <script>
+    function comparePrice(product1, product2) {
+      if (product1.price < product2.price) {
+        return product1;
+      } else {
+        return product2;
+      }
+    }
+    const product1 = {
+      name: 'basketball',
+      price: 2095
+    };
+
+    const product2 = {
+      name: 'soccer ball',
+      price: 1595 
+    };
+    const cheaperProduct = comparePrice(product1, product2);
+    console.log(`The cheaper product is: ${cheaperProduct.name}, priced at ${cheaperProduct.price} cents`);
+  </script>
+</body>
+</html>

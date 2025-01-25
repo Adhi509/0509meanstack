@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Reset</title>
+</head>
+<body>
+    <script>
+        let basketballPrice = 20.95; // One basketball price
+        let tShirtPrice = 7.99;      // One t-shirt price
+        let shipping = 0;            // Free shipping for both
+        let totalBeforeTax = basketballPrice + tShirtPrice + shipping;
+        let taxRate = 0.1; // 10%
+        let estimatedTax = Math.round((totalBeforeTax * taxRate) * 100) / 100; // Rounded tax
+        let orderTotal = totalBeforeTax + estimatedTax;
+        let message = `
+            Reset Cart:
+            Items (2): $${totalBeforeTax.toFixed(2)}
+            Tax: $${estimatedTax}
+            Order Total: $${orderTotal.toFixed(2)}
+        `;
+        alert(message);
+    </script>
+</body>
+</html>

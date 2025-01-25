@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Coin Flip Game</title>
+</head>
+<body>
+  <script>
+    // 6f: Generate a random number
+    let randomNumber = Math.random();
+    console.log("Random Number:", randomNumber);
+
+    // 6g: Determine heads or tails using if-statement
+    if (randomNumber < 0.5) {
+      console.log("heads");
+    } else {
+      console.log("tails");
+    }
+
+    // 6h: Save the result in a variable
+    let result = randomNumber < 0.5 ? "heads" : "tails"; // Using ternary for clarity
+    console.log("Result:", result);
+
+    // 6i: Guess the result and check if it matches
+    let guess = "heads"; // Change to "tails" to test different guesses
+    if (guess === result) {
+      console.log("You win!");
+    } else {
+      console.log("You lose!");
+    }
+
+    // 6j: Rewrite using ternary operators
+    let message = (guess === result) ? "You win!" : "You lose!";
+    console.log("Ternary Message:", message);
+  </script>
+</body>
+</html>

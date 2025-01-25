@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercise 6l</title>
+</head>
+<body>
+  <h1>Cart Quantity - Min Check</h1>
+  <button onclick="removeOne()">Remove 1</button>
+  <button onclick="removeTwo()">Remove 2</button>
+  <button onclick="removeThree()">Remove 3</button>
+  <script>
+    let quantity = 2; // Starting quantity
+
+    function removeOne() {
+      updateQuantity(-1);
+    }
+
+    function removeTwo() {
+      updateQuantity(-2);
+    }
+
+    function removeThree() {
+      updateQuantity(-3);
+    }
+
+    function updateQuantity(change) {
+      if (quantity + change < 0) {
+        alert("Not enough items in the cart");
+      } else {
+        quantity += change;
+        console.log("Updated Quantity:", quantity);
+      }
+    }
+  </script>
+</body>
+</html>

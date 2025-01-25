@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercise 8h</title>
+</head>
+<body>
+  <h1>Calculator</h1>
+  <div id="display">0</div>
+  <button onclick="updateCalculation('1')">1</button>
+  <button onclick="updateCalculation('2')">2</button>
+  <button onclick="updateCalculation('3')">3</button>
+  <button onclick="updateCalculation('+')">+</button>
+  <button onclick="updateCalculation('=')">=</button>
+  <script>
+    let currentCalculation = localStorage.getItem('calculation') || '';
+    document.getElementById('display').textContent = currentCalculation || '0';
+
+    function updateCalculation(value) {
+      if (value === '=') {
+        currentCalculation = eval(currentCalculation);
+      } else {
+        currentCalculation += value;
+      }
+      localStorage.setItem('calculation', currentCalculation);
+      document.getElementById('display').textContent = currentCalculation;
+    }
+  </script>
+</body>
+</html>

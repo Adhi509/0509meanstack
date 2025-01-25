@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Exercise 5k</title>
+</head>
+<body>
+    <p>Cart Quantity: <span id="quantity">0</span></p>
+    <button onclick="increment()">++</button>
+    <button onclick="decrement()">--</button>
+    <script>
+        let quantity = 0;
+
+        function increment() {
+            quantity++; // Shortcut for adding 1
+            document.getElementById('quantity').textContent = quantity;
+        }
+
+        function decrement() {
+            quantity--; // Shortcut for subtracting 1
+            document.getElementById('quantity').textContent = quantity;
+        }
+    </script>
+</body>
+</html>

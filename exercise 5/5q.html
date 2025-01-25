@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Exercise 5q</title>
+  <script>
+    let calculation = ""; // Initialize calculation variable
+
+    function addToCalculation(value) {
+      calculation += value; // Add value to the calculation
+      console.log(calculation); // Display in console
+    }
+
+    function calculateResult() {
+      calculation = eval(calculation); // Evaluate the string as math
+      console.log(calculation); // Display the result in console
+    }
+  </script>
+</head>
+<body>
+  <button onclick="addToCalculation('1')">1</button>
+  <button onclick="addToCalculation('2')">2</button>
+  <button onclick="addToCalculation('+')">+</button>
+  <button onclick="calculateResult()">=</button>
+</body>
+</html>
+

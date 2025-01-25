@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercise 7l</title>
+</head>
+<body>
+  <h1>Cart Quantity</h1>
+  <div id="quantity">0</div>
+  <button onclick="updateCartQuantity(1)">+1</button>
+  <button onclick="updateCartQuantity(-1)">-1</button>
+  <script>
+    let cartQuantity = 0;
+
+    function updateCartQuantity(change) {
+      const newQuantity = cartQuantity + change;
+
+      if (newQuantity < 0) {
+        alert('Quantity cannot be less than 0!');
+        return;
+      }
+
+      if (newQuantity > 10) {
+        alert('Quantity cannot exceed 10!');
+        return;
+      }
+
+      cartQuantity = newQuantity;
+      document.getElementById('quantity').textContent = cartQuantity;
+    }
+  </script>
+</body>
+</html>

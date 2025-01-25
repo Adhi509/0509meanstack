@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Exercise 5i</title>
+</head>
+<body>
+    <p>Cart Quantity: <span id="quantity">0</span></p>
+    <button onclick="removeFromCart()">Remove from Cart</button>
+    <script>
+        let quantity = 0;
+
+        function removeFromCart() {
+            quantity -= 1; // Decrease by 1
+            document.getElementById('quantity').textContent = quantity;
+        }
+    </script>
+</body>
+</html>

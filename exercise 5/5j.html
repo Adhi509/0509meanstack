@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Exercise 5j</title>
+</head>
+<body>
+    <p>Cart Quantity: <span id="quantity">0</span></p>
+    <button onclick="decreaseQuantity(2)">-2</button>
+    <button onclick="decreaseQuantity(3)">-3</button>
+    <script>
+        let quantity = 0;
+
+        function decreaseQuantity(amount) {
+            quantity -= amount; // Decrease by the specified amount
+            document.getElementById('quantity').textContent = quantity;
+        }
+    </script>
+</body>
+</html>
+
+

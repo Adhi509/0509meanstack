@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Exercise 2h</title>
+</head>
+<body>
+    <script>
+        let totalBeforeTax = 5396; // $53.96 in cents (from 2g)
+        let tax = Math.round(totalBeforeTax * 0.10); // 10% tax rounded to the nearest cent
+        document.body.innerHTML = "Estimated 10% tax: $" + (tax / 100).toFixed(2);
+    </script>
+</body>
+</html>
